@@ -1,20 +1,28 @@
 <script lang="ts">
   import facebookLogo from '$lib/assets/f_logo_RGB-Black_72.png';
-  import githubLogo from '$lib/assets/GitHub-Mark-120px-plus.png'
+  import githubLogo from '$lib/assets/GitHub-Mark-120px-plus.png';
   import linkedinLogo from '$lib/assets/iconmonstr-linkedin-3.svg';
   import svelteLogo from '$lib/assets/svelte-logo.svg';
 </script>
 
-<!-- markup (zero or more items) goes here -->
 <footer>
   <div class="footer-content">
     <p class="svelte-block">
-      Built with <img class="svelte-logo" src="{svelteLogo}" alt="Svelte" />
+      Built with
+      <a href="https://kit.svelte.dev/" target="_blank" rel="noopener noreferrer">
+        <img class="svelte-logo" src={svelteLogo} alt="Svelte" />
+      </a>
     </p>
     <div class="social-block">
-      <img src="{githubLogo}" alt="Github" />
-      <img src="{linkedinLogo}" alt="LinkedIn" />
-      <img src="{facebookLogo}" alt="Facebook" />
+      <a href="https://github.com/duffbuster" target="_blank" rel="noopener noreferrer">
+        <img src={githubLogo} alt="Github" />
+      </a>
+      <a href="https://www.linkedin.com/in/mackeydev/" target="_blank" rel="noopener noreferrer">
+        <img src={linkedinLogo} alt="LinkedIn" />
+      </a>
+      <a href="https://www.facebook.com/colinmackeyphoto" target="_blank" rel="noopener noreferrer">
+        <img src={facebookLogo} alt="Facebook" />
+      </a>
     </div>
   </div>
 </footer>
@@ -33,8 +41,13 @@
     margin-bottom: calc(var(--spacing-unit) * 2);
   }
 
-  .svelte-logo {
+  p.svelte-block a {
+    align-items: center;
+    display: flex;
     margin-left: var(--spacing-unit);
+  }
+
+  .svelte-logo {
     width: 32px;
   }
 
