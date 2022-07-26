@@ -1,25 +1,23 @@
-<svelte:head>
-  <title>MackeyDev</title>
-</svelte:head>
-
 <script>
-  // import About from '$lib/About.svelte';
-  // import Hero from '$lib/hero.svelte';
+  import About from '$lib/About.svelte';
+  import Hero from '$lib/Hero.svelte';
   // import Skills from '$lib/Skills.svelte';
   // import Testimonials from '$lib/Testimonials.svelte';
 </script>
 
+<svelte:head>
+  <title>MackeyDev</title>
+</svelte:head>
+
 <div class="mackeydev">
-  <p>Hello World!</p>
-  <!-- <Hero />
+  <Hero />
   <About />
-  <Skills />
+  <!-- <Skills />
   <Testimonials /> -->
 </div>
 
 <style>
-	/* styles go here */
+  /* styles go here */
   .mackeydev {
-
   }
 </style>
