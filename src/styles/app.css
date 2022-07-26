@@ -1,0 +1,75 @@
+@import '@fontsource/nunito';
+
+:root {
+  font-family: 'Nunito';
+  --pure-white: #ffffff;
+  --off-white: #f5f5f5;
+  --orange: #f04f3b;
+  --navy: #0d526e;
+  --spacing-unit: 8px;
+}
+
+body {
+  background-color: var(--off-white);
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* #svelte {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+} */
+
+h1,
+p {
+  color: var(--navy);
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.75;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  color: var(--orange);
+  font-size: 24px;
+  line-height: 1.75;
+}
+
+button {
+  align-items: center;
+  background-color: transparent;
+  border: 1.5px solid var(--orange);
+  border-radius: 6px;
+  color: var(--navy);
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Nunito';
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: 0.05em;
+  padding: 12px 24px;
+  text-transform: uppercase;
+}
+
+button:hover {
+  /* TODO: */
+}
+
+/* TODO: Mobile global styles */
