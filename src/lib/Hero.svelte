@@ -1,4 +1,4 @@
-<div class="hero">
+<div class="hero" id="hero">
   <div class="hero-text">
     <h1 class="display-76 white">Hi, I'm Colin.</h1>
     <p class="white">Philadelphia, PA</p>
@@ -11,6 +11,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 100px;
     padding: 300px 0;
   }
 

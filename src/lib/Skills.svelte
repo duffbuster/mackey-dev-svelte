@@ -1,4 +1,4 @@
-<div class="skills">
+<div class="skills" id="skills">
   <div class="skills-quadrant">
     <h1>Work Experience</h1>
     <ul>

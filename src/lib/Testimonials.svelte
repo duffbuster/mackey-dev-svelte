@@ -2,7 +2,7 @@
   import FilmFundLogo from '$lib/assets/film_fund_logo.png';
 </script>
 
-<div class="testimonials">
+<div class="testimonials" id="testimonials">
   <div class="testimonials-header">
     <h1>Testimonials</h1>
     <p>
