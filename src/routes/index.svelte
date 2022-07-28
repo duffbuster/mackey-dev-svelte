@@ -2,7 +2,7 @@
   import About from '$lib/About.svelte';
   import Hero from '$lib/Hero.svelte';
   import Skills from '$lib/Skills.svelte';
-  // import Testimonials from '$lib/Testimonials.svelte';
+  import Testimonials from '$lib/Testimonials.svelte';
 </script>
 
 <svelte:head>
@@ -13,11 +13,10 @@
   <Hero />
   <About />
   <Skills />
-  <!-- <Testimonials /> -->
+  <Testimonials />
 </div>
 
 <style>
-  /* styles go here */
   .mackeydev {
   }
 </style>

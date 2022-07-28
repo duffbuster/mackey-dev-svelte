@@ -1,0 +1,57 @@
+<script lang="ts">
+  import FilmFundLogo from '$lib/assets/film_fund_logo.png';
+</script>
+
+<div class="testimonials">
+  <div class="testimonials-header">
+    <h1>Testimonials</h1>
+    <p>
+      I've done a lot of great work for freelance clients as well. Don't just take my word for it
+      though...
+    </p>
+  </div>
+
+  <div class="testimonials-grid">
+    <div class="testimonials-grid-item">
+      <h2>Tom Verdi, The Film Fund</h2>
+      <p>
+        Colin has been our go-to web developer for years now thanks to his quick turnaround time,
+        attention to detail, and genuine desire to develop efficient solutions. His work never fails
+        to impress, and it's always easy to use. He understands what needs to be done, and he does
+        it. And the finished product always looks good, too!
+      </p>
+      <img src={FilmFundLogo} alt="TheFilmFund" />
+    </div>
+  </div>
+</div>
+
+<style>
+  .testimonials {
+    margin: 0 auto;
+    max-width: 1262px;
+    padding: calc(var(--spacing-unit) * 10) 0;
+  }
+
+  .testimonials-header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: calc(var(--spacing-unit) * 8);
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: calc(var(--spacing-unit) * 8);
+  }
+
+  .testimonials-grid-item {
+    padding-right: calc(var(--spacing-unit) * 8);
+  }
+
+  .testimonials-grid-item img {
+    margin-top: calc(var(--spacing-unit) * 2);
+    max-width: 250px;
+  }
+</style>

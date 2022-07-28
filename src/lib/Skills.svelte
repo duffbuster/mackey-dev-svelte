@@ -1,7 +1,3 @@
-<script lang="ts">
-</script>
-
-<!-- markup (zero or more items) goes here -->
 <div class="skills">
   <div class="skills-quadrant">
     <h1>Work Experience</h1>
@@ -78,11 +74,12 @@
     grid-template-columns: 1fr 1fr;
     gap: calc(var(--spacing-unit) * 4);
     grid-template-rows: 1fr 1fr;
+    max-width: 1600px;
     padding: calc(var(--spacing-unit) * 8);
   }
 
   .skills-quadrant {
-    padding-right: calc(var(--spacing-unit) * 4);
+    padding-right: calc(var(--spacing-unit) * 5);
   }
 
   .skills ul {
