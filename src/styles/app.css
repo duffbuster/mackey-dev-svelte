@@ -9,6 +9,10 @@
   --spacing-unit: 8px;
 }
 
+html{
+  scroll-behavior: smooth;;
+}
+
 body {
   background-color: var(--off-white);
   margin: 0;
