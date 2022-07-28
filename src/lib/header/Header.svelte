@@ -13,7 +13,7 @@
     const onScroll = () => {
       const currentScroll = window.scrollY;
 
-      if (currentScroll > lastScroll) {
+      if (currentScroll > lastScroll + 20) {
         headerVisible = false;
       } else if (currentScroll < lastScroll) {
         headerVisible = true;
