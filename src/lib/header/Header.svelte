@@ -3,13 +3,36 @@
 
   import logo from './mackeydev_FullColor.svg';
 
-  const handleClick = (target: string) => {
-    console.log('Click!', target);
+  // fucking typescript man
+  let about: any;
+  let skills: any;
+  let testimonials: any;
+
+  let activeNavItem: 'about' | 'skills' | 'testimonials';
+
+  const handleResumeClick = () => {
+    console.log('resume click');
+  };
+
+  const setActiveNav = (currentScroll: number) => {
+    if (currentScroll <= about.offsetTop && currentScroll < skills.offsetTop) {
+      activeNavItem = 'about';
+    } else if (currentScroll <= skills.offsetTop && currentScroll < testimonials.offsetTop) {
+      activeNavItem = 'skills';
+    } else if (currentScroll <= testimonials.offsetTop) {
+      activeNavItem = 'testimonials';
+    }
   };
 
   let lastScroll = 0;
   let headerVisible = true;
   onMount(() => {
+    about = document.getElementById('about');
+    skills = document.getElementById('skills');
+    testimonials = document.getElementById('testimonials');
+
+    setActiveNav(window.scrollY);
+
     const onScroll = () => {
       const currentScroll = window.scrollY;
 
@@ -18,6 +41,8 @@
       } else if (currentScroll < lastScroll) {
         headerVisible = true;
       }
+
+      setActiveNav(currentScroll);
 
       lastScroll = currentScroll;
     };
@@ -37,16 +62,16 @@
   <nav>
     <ul>
       <li>
-        <a on:click={() => handleClick('about')} href="#about">About</a>
+        <a class:active={activeNavItem === 'about'} href="#about">About</a>
       </li>
       <li>
-        <a on:click={() => handleClick('skills')} href="#skills">Skills</a>
+        <a class:active={activeNavItem === 'skills'} href="#skills">Skills</a>
       </li>
       <li>
-        <a on:click={() => handleClick('testimonials')} href="#testimonials">Testimonials</a>
+        <a class:active={activeNavItem === 'testimonials'} href="#testimonials">Testimonials</a>
       </li>
       <li>
-        <button on:click={() => handleClick('resume')}>Resume</button>
+        <button on:click={handleResumeClick}>Resume</button>
       </li>
     </ul>
   </nav>
@@ -107,10 +132,8 @@
     height: 100%;
   }
 
-  li.active::before {
-  }
-
   nav a {
+    border-bottom: 0px solid var(--orange);
     color: var(--navy);
     font-size: 18px;
     font-weight: bold;
@@ -119,8 +142,14 @@
     margin-right: calc(var(--spacing-unit) * 4);
     text-decoration: none;
     text-transform: uppercase;
+    transition: border ease-in 0.2s;
   }
 
-  a:hover {
+  nav a.active {
+    border-bottom-width: 2px;
+  }
+
+  nav a:hover {
+    border-bottom-width: 2px;
   }
 </style>
