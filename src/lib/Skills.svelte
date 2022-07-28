@@ -97,7 +97,7 @@
     background: url('/Vector.svg') no-repeat;
     list-style-type: none;
     margin: 0;
-    margin-bottom: calc(var(--spacing-unit) * 2);
+    margin-bottom: calc(var(--spacing-unit) * 3);
     padding: 0px 0px 1px 24px;
     vertical-align: middle;
   }
