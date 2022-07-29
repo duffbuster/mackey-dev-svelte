@@ -5,6 +5,7 @@
   --pure-white: #ffffff;
   --off-white: #f5f5f5;
   --orange: #f04f3b;
+  --orange-lite: rgb(240 79 59 / 60%);
   --navy: #0d526e;
   --spacing-unit: 8px;
 }
@@ -66,7 +67,8 @@ h2 {
   color: var(--pure-white);
 }
 
-button {
+button,
+a.button {
   align-items: center;
   background-color: transparent;
   border: 1.5px solid var(--orange);
@@ -82,10 +84,16 @@ button {
   letter-spacing: 0.05em;
   padding: 12px 24px;
   text-transform: uppercase;
+  transition: border-color ease 0.2s;
 }
 
-button:hover {
-  /* TODO: */
+a.button {
+  text-decoration: none;
+}
+
+button:hover,
+a.button:hover {
+  border-color: var(--orange-lite);
 }
 
 /* TODO: Mobile global styles */

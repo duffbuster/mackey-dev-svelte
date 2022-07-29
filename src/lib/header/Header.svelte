@@ -142,7 +142,7 @@
     margin-right: calc(var(--spacing-unit) * 4);
     text-decoration: none;
     text-transform: uppercase;
-    transition: border ease-in 0.2s;
+    transition: border ease 0.2s;
   }
 
   nav a.active {
@@ -151,5 +151,6 @@
 
   nav a:hover {
     border-bottom-width: 2px;
+    border-color: var(--orange-lite);
   }
 </style>
