@@ -20,7 +20,9 @@
         to impress, and it's always easy to use. He understands what needs to be done, and he does
         it. And the finished product always looks good, too!
       </p>
-      <img src={FilmFundLogo} alt="TheFilmFund" />
+      <a href="https://www.thefilmfund.co/" target="_blank" rel="noopener noreferrer">
+        <img src={FilmFundLogo} alt="TheFilmFund" />
+      </a>
     </div>
   </div>
 </div>
