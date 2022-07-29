@@ -8,7 +8,7 @@
         Experience. I've built experience on startup teams, consulted at Fortune 500 companies, and
         hacked my way through my own freelance engagements.
       </p>
-      <button>Learn More</button>
+      <a href="#skills" class="button">Learn More</a>
     </div>
   </div>
 
