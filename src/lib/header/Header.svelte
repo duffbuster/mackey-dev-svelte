@@ -185,7 +185,7 @@
   }
 
   /* Tablet */
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 992px) {
     header {
       padding: 18px 24px;
     }
@@ -234,9 +234,5 @@
     .brand img {
       width: 100px;
     }
-  }
-
-  /* Mobile */
-  @media screen and (max-width: 479px) {
   }
 </style>

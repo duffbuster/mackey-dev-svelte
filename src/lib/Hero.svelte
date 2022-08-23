@@ -58,9 +58,14 @@
 
   /* Tablet */
   @media screen and (max-width: 992px) {
-  }
+    .hero {
+      margin-top: 70px;
+      padding: 200px 0;
+    }
 
-  /* Mobile */
-  @media screen and (max-width: 479px) {
+    .hero-text {
+      max-width: none;
+      text-align: center;
+    }
   }
 </style>

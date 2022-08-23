@@ -102,3 +102,29 @@ a.button:hover {
 }
 
 /* TODO: Mobile global styles */
+
+/* Tablet */
+@media screen and (max-width: 992px) {
+  h1.display-76 {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+
+  button,
+  a.button {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 479px) {
+}
