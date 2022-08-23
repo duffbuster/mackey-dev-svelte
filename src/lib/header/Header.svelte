@@ -1,7 +1,9 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
-  import logo from './mackeydev_FullColor.svg';
+  import desktopLogo from './mackeydev_FullColor.svg';
+  import hamburgerIcon from './Hamburger_icon.svg';
+  import mobileLogo from './mackeydev_mobile.svg';
 
   // fucking typescript man
   let about: any;
@@ -10,8 +12,15 @@
 
   let activeNavItem: 'about' | 'skills' | 'testimonials';
 
+  let hamburgerMenuOpen = false;
+
   const handleResumeClick = () => {
     console.log('resume click');
+  };
+
+  const handleHamburgerMenuClick = () => {
+    hamburgerMenuOpen = !hamburgerMenuOpen;
+    console.log('Menu Click!', hamburgerMenuOpen);
   };
 
   const setActiveNav = (currentScroll: number) => {
@@ -55,11 +64,12 @@
 <header class:visible={headerVisible}>
   <div class="brand">
     <a href="#hero">
-      <img src={logo} alt="MackeyDev" />
+      <img class="desktop-logo" src={desktopLogo} alt="MackeyDev" />
+      <img class="mobile-logo" src={mobileLogo} alt="MackeyDev" />
     </a>
   </div>
 
-  <nav>
+  <nav class:open={hamburgerMenuOpen && headerVisible}>
     <ul>
       <li>
         <a class:active={activeNavItem === 'about'} href="#about">About</a>
@@ -75,6 +85,14 @@
       </li>
     </ul>
   </nav>
+
+  <div
+    on:click={handleHamburgerMenuClick}
+    class="hamburger-menu"
+    class:open={hamburgerMenuOpen && headerVisible}
+  >
+    <img src={hamburgerIcon} alt="Menu" />
+  </div>
 </header>
 
 <style>
@@ -103,12 +121,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-  }
-
-  .brand img {
-    object-fit: contain;
   }
 
   nav {
@@ -128,8 +140,15 @@
   li {
     align-items: center;
     display: flex;
-    position: relative;
     height: 100%;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.open {
+    display: block;
   }
 
   nav a {
@@ -152,5 +171,72 @@
   nav a:hover {
     border-bottom-width: 2px;
     border-color: var(--orange-lite);
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .desktop-logo {
+    display: block;
+  }
+  .mobile-logo {
+    display: none;
+  }
+
+  /* Tablet */
+  @media screen and (max-width: 991px) {
+    header {
+      padding: 18px 24px;
+    }
+
+    .hamburger-menu {
+      display: flex;
+      cursor: pointer;
+    }
+
+    nav {
+      background-color: white;
+      box-sizing: border-box;
+      justify-content: flex-end;
+      left: 0;
+      padding: 24px;
+      position: absolute;
+      top: 70px;
+      width: 100%;
+    }
+
+    nav ul {
+      align-items: flex-end;
+      flex-direction: column;
+    }
+
+    nav li a {
+      margin-bottom: 16px;
+      margin-right: 0;
+    }
+
+    .desktop-logo {
+      display: none;
+    }
+    .mobile-logo {
+      display: block;
+    }
+
+    .brand {
+      width: 100px;
+    }
+
+    .brand a {
+      justify-content: flex-start;
+    }
+
+    .brand img {
+      width: 100px;
+    }
+  }
+
+  /* Mobile */
+  @media screen and (max-width: 479px) {
   }
 </style>
