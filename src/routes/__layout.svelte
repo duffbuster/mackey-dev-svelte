@@ -1,12 +1,14 @@
 <script lang="ts">
   import Header from '$lib/header/Header.svelte';
-	import Footer from '$lib/footer/Footer.svelte';
+  import Footer from '$lib/footer/Footer.svelte';
 
-	import '../styles/app.css';
+  import '../styles/app.css';
 </script>
 
-<Header />
+<div class="animate__animated animate__fadeIn">
+  <Header />
 
-<slot></slot>
+  <slot />
 
-<Footer />
+  <Footer />
+</div>

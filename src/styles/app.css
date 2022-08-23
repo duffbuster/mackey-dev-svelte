@@ -1,4 +1,5 @@
 @import '@fontsource/nunito';
+@import 'animate.css';
 
 :root {
   font-family: 'Nunito';
@@ -8,6 +9,10 @@
   --orange-lite: rgb(240 79 59 / 60%);
   --navy: #0d526e;
   --spacing-unit: 8px;
+}
+
+:root {
+  --animate-duration: .3s;
 }
 
 html{
