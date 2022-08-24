@@ -63,4 +63,24 @@
       width: 400px;
     }
   }
+
+  /* Mobile */
+  @media screen and (max-width: 479px) {
+    .about {
+      grid-template-columns: 1fr;
+      padding: 48px 16px 24px;
+    }
+
+    .about-copy {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .headshot {
+      height: 300px;
+      width: 300px;
+    }
+  }
 </style>

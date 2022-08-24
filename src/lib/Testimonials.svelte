@@ -67,4 +67,25 @@
       gap: calc(var(--spacing-unit) * 4);
     }
   }
+
+  /* Mobile */
+  @media screen and (max-width: 479px) {
+    .testimonials {
+      padding: 24px 16px 48px;
+    }
+
+    .testimonials-header {
+      margin-bottom: calc(var(--spacing-unit) * 4);
+      text-align: center;
+    }
+
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .testimonials-grid-item {
+      padding-right: 0;
+      text-align: center;
+    }
+  }
 </style>

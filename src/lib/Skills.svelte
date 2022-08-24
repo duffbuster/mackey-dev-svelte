@@ -109,6 +109,7 @@
     border-radius: 12px;
     height: 443px;
     margin: 0 auto;
+    max-width: 100%;
     width: 431px;
   }
 
@@ -122,6 +123,31 @@
     .cat-mask {
       height: 350px;
       width: 350px;
+    }
+  }
+
+  /* Mobile */
+  @media screen and (max-width: 479px) {
+    .cat-mask {
+      height: 300px;
+      width: 300px;
+    }
+    .skills {
+      grid-template-columns: 1fr;
+    }
+
+    .skills ul {
+      margin-top: calc(var(--spacing-unit) * 2);
+    }
+
+    .skills ul li {
+      background-position-y: 5px;
+      background-size: 16px;
+      padding-left: 12px;
+    }
+
+    .skills-quadrant {
+      padding: 0;
     }
   }
 </style>
