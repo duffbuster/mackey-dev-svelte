@@ -111,4 +111,17 @@
     margin: 0 auto;
     width: 431px;
   }
+
+  /* Tablet */
+  @media screen and (max-width: 992px) {
+    .skills {
+      gap: calc(var(--spacing-unit) * 2);
+      padding: calc(var(--spacing-unit) * 4);
+    }
+
+    .cat-mask {
+      height: 350px;
+      width: 350px;
+    }
+  }
 </style>

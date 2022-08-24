@@ -47,4 +47,20 @@
     margin: 124px auto;
     width: 572px;
   }
+
+  /* Tablet */
+  @media screen and (max-width: 992px) {
+    .about {
+      padding: 0 24px;
+    }
+
+    .about-copy {
+      padding: 0 24px;
+    }
+
+    .headshot {
+      height: 400px;
+      width: 400px;
+    }
+  }
 </style>

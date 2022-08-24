@@ -56,4 +56,15 @@
     margin-top: calc(var(--spacing-unit) * 2);
     max-width: 250px;
   }
+
+  /* Tablet */
+  @media screen and (max-width: 992px) {
+    .testimonials {
+      padding: 0 48px 24px;
+    }
+
+    .testimonials-grid {
+      gap: calc(var(--spacing-unit) * 4);
+    }
+  }
 </style>
