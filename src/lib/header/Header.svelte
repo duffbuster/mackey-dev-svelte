@@ -47,6 +47,7 @@
 
       if (currentScroll > lastScroll + 20) {
         headerVisible = false;
+        hamburgerMenuOpen = false;
       } else if (currentScroll < lastScroll) {
         headerVisible = true;
       }
@@ -69,7 +70,7 @@
     </a>
   </div>
 
-  <nav class:open={hamburgerMenuOpen && headerVisible}>
+  <nav class:closed={!hamburgerMenuOpen} class:open={hamburgerMenuOpen}>
     <ul>
       <li>
         <a class:active={activeNavItem === 'about'} href="#about">About</a>
@@ -86,11 +87,7 @@
     </ul>
   </nav>
 
-  <div
-    on:click={handleHamburgerMenuClick}
-    class="hamburger-menu"
-    class:open={hamburgerMenuOpen && headerVisible}
-  >
+  <div on:click={handleHamburgerMenuClick} class="hamburger-menu" class:open={hamburgerMenuOpen}>
     <img src={hamburgerIcon} alt="Menu" />
   </div>
 </header>
@@ -143,14 +140,6 @@
     height: 100%;
   }
 
-  nav {
-    display: none;
-  }
-
-  nav.open {
-    display: block;
-  }
-
   nav a {
     border-bottom: 0px solid var(--orange);
     color: var(--navy);
@@ -184,6 +173,28 @@
     display: none;
   }
 
+  @keyframes mobileNavOpen {
+    0% {
+      opacity: 0;
+      max-height: 0px;
+    }
+    100% {
+      opacity: 1;
+      max-height: 300px;
+    }
+  }
+
+  @keyframes mobileNavClose {
+    0% {
+      opacity: 1;
+      max-height: 300px;
+    }
+    100% {
+      opacity: 0;
+      max-height: 0px;
+    }
+  }
+
   /* Tablet */
   @media screen and (max-width: 992px) {
     header {
@@ -195,7 +206,22 @@
       cursor: pointer;
     }
 
+    nav.closed {
+      animation-duration: 0.3s;
+      animation-fill-mode: both;
+      animation-name: mobileNavClose;
+      animation-timing-function: ease-in;
+    }
+
+    nav.open {
+      animation-duration: 0.3s;
+      animation-fill-mode: both;
+      animation-name: mobileNavOpen;
+      animation-timing-function: ease-in;
+    }
+
     nav {
+      animation-fill-mode: both;
       background-color: white;
       box-sizing: border-box;
       justify-content: flex-end;
