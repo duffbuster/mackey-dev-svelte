@@ -15,12 +15,11 @@
   let hamburgerMenuOpen = false;
 
   const handleResumeClick = () => {
-    console.log('resume click');
+    window.open('https://mackey-resume.s3.amazonaws.com/Colin+Mackey+Resume.pdf', 'blank');
   };
 
   const handleHamburgerMenuClick = () => {
     hamburgerMenuOpen = !hamburgerMenuOpen;
-    console.log('Menu Click!', hamburgerMenuOpen);
   };
 
   const setActiveNav = (currentScroll: number) => {
@@ -62,6 +61,9 @@
   });
 </script>
 
+<!-- NOTE: I might be able to fix the mobile menu overflow by 
+  wrapping the interior of the header and styling that -->
+<!-- That won't fix the animation on reload though, might be able to use animate css if the above works... -->
 <header class:visible={headerVisible}>
   <div class="brand">
     <a href="#hero">
@@ -206,6 +208,11 @@
       cursor: pointer;
     }
 
+    nav {
+      max-height: 0;
+    }
+
+    /* TODO: Fix this animation */
     nav.closed {
       animation-duration: 0.3s;
       animation-fill-mode: both;
