@@ -104,7 +104,7 @@
   }
 
   .cat-mask {
-    background: url('lady.JPG') no-repeat;
+    background-image: url('/lady.JPG');
     background-size: cover;
     background-position-y: 40%;
     border-radius: 12px;
