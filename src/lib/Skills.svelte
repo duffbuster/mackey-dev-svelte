@@ -95,6 +95,7 @@
 
   .skills ul li {
     background: url('/Vector.svg') no-repeat;
+    background-position-y: 3px;
     list-style-type: none;
     margin: 0;
     margin-bottom: calc(var(--spacing-unit) * 3);
