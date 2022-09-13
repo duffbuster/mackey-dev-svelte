@@ -1,16 +1,15 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
-  import desktopLogo from './mackeydev_FullColor.svg';
-  import hamburgerIcon from './Hamburger_icon.svg';
-  import mobileLogo from './mackeydev_mobile.svg';
+  import desktopLogo from '../assets/mackeydev_FullColor.svg';
+  import hamburgerIcon from '../assets/Hamburger_icon.svg';
+  import mobileLogo from '../assets/mackeydev_mobile.svg';
 
-  // fucking typescript man
-  let about: any;
-  let skills: any;
-  let testimonials: any;
+  let about;
+  let skills;
+  let testimonials;
 
-  let activeNavItem: 'about' | 'skills' | 'testimonials';
+  let activeNavItem;
 
   let hamburgerMenuOpen = false;
 
@@ -22,7 +21,7 @@
     hamburgerMenuOpen = !hamburgerMenuOpen;
   };
 
-  const setActiveNav = (currentScroll: number) => {
+  const setActiveNav = (currentScroll) => {
     if (currentScroll <= about.offsetTop && currentScroll < skills.offsetTop) {
       activeNavItem = 'about';
     } else if (currentScroll <= skills.offsetTop && currentScroll < testimonials.offsetTop) {

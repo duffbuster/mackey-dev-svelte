@@ -1,5 +1,5 @@
 <script lang="ts">
-  import FilmFundLogo from '$lib/assets/film_fund_logo.png';
+  import FilmFundLogo from './assets/film_fund_logo.png';
 </script>
 
 <div class="testimonials" id="testimonials">

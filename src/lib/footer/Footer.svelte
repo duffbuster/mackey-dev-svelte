@@ -1,8 +1,8 @@
 <script lang="ts">
-  import facebookLogo from '$lib/assets/f_logo_RGB-Black_72.png';
-  import githubLogo from '$lib/assets/GitHub-Mark-120px-plus.png';
-  import linkedinLogo from '$lib/assets/iconmonstr-linkedin-3.svg';
-  import svelteLogo from '$lib/assets/svelte-logo.svg';
+  import facebookLogo from '../assets/f_logo_RGB-Black_72.png';
+  import githubLogo from '../assets/GitHub-Mark-120px-plus.png';
+  import linkedinLogo from '../assets/iconmonstr-linkedin-3.svg';
+  import svelteLogo from '../assets/svelte-logo.svg';
 </script>
 
 <footer>
