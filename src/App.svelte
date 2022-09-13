@@ -7,7 +7,7 @@
   import Testimonials from './lib/Testimonials.svelte';
 </script>
 
-<div class="mackeydev">
+<div class="mackeydev animate__animated animate__fadeIn">
   <Header />
   <Hero />
   <About />
