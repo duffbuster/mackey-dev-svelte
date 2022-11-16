@@ -42,13 +42,14 @@
     animation-timing-function: ease-in;
     animation-delay: 0.1s;
   }
+
   .hero {
     background-image: url('/pexels-kelly-4642388.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 100px;
-    padding: 300px 0;
+    padding: 200px 0;
   }
 
   .hero-text {
@@ -60,7 +61,7 @@
   @media screen and (max-width: 992px) {
     .hero {
       margin-top: 70px;
-      padding: 200px 0;
+      padding: 150px 0;
     }
 
     .hero-text {

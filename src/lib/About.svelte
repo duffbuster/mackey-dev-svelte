@@ -39,12 +39,13 @@
 
   .headshot {
     background-image: url('/headshot.JPEG');
+    background-position-x: 0px;
     background-position-y: 50%;
     background-size: cover;
     border-radius: 50%;
-    height: 572px;
+    height: 500px;
     margin: 124px auto;
-    width: 572px;
+    width: 500px;
   }
 
   /* Tablet */
