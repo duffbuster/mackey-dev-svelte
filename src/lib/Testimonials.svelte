@@ -1,5 +1,5 @@
 <script lang="ts">
-  import FilmFundLogo from './assets/film_fund_logo.png';
+  import { testimonials } from './assets/testimonials';
 </script>
 
 <div class="testimonials" id="testimonials">
@@ -12,18 +12,17 @@
   </div>
 
   <div class="testimonials-grid">
-    <div class="testimonials-grid-item">
-      <h2>Tom Verdi, The Film Fund</h2>
-      <p>
-        Colin has been our go-to web developer for years now thanks to his quick turnaround time,
-        attention to detail, and genuine desire to develop efficient solutions. His work never fails
-        to impress, and it's always easy to use. He understands what needs to be done, and he does
-        it. And the finished product always looks good, too!
-      </p>
-      <a href="https://www.thefilmfund.co/" target="_blank" rel="noopener noreferrer">
-        <img src={FilmFundLogo} alt="TheFilmFund" />
-      </a>
-    </div>
+    {#each testimonials as testimonial}
+      <div class="testimonials-grid-item">
+        <h2>{testimonial.title}</h2>
+        <p>
+          {testimonial.body}
+        </p>
+        <a href={testimonial.link} target="_blank" rel="noopener noreferrer">
+          <img src={testimonial.logo} alt={testimonial.alt} />
+        </a>
+      </div>
+    {/each}
   </div>
 </div>
 
