@@ -55,6 +55,8 @@
   .hero-text {
     margin: auto;
     max-width: 60vw;
+    position: relative;
+    z-index: 0;
   }
 
   /* Tablet */

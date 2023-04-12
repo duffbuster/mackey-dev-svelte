@@ -88,7 +88,12 @@
     </ul>
   </nav>
 
-  <div on:click={handleHamburgerMenuClick} class="hamburger-menu" class:open={hamburgerMenuOpen}>
+  <div
+    on:click={handleHamburgerMenuClick}
+    on:keydown={handleHamburgerMenuClick}
+    class="hamburger-menu"
+    class:open={hamburgerMenuOpen}
+  >
     <img src={hamburgerIcon} alt="Menu" />
   </div>
 </header>
@@ -105,6 +110,7 @@
     top: -100px;
     transition: top ease-in-out 0.3s;
     width: 100vw;
+    z-index: 1;
   }
 
   header.visible {
