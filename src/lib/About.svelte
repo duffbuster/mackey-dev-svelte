@@ -12,7 +12,7 @@
   </div>
 
   <div class="column-2">
-    <div class="headshot" />
+    <div class="headshot"></div>
   </div>
 </div>
 

@@ -9,9 +9,9 @@
   let skills;
   let testimonials;
 
-  let activeNavItem;
+  let activeNavItem = $state();
 
-  let hamburgerMenuOpen = false;
+  let hamburgerMenuOpen = $state(false);
 
   const handleResumeClick = () => {
     window.open('https://mackey-resume.s3.amazonaws.com/Colin+Mackey+Resume.pdf', 'blank');
@@ -32,7 +32,7 @@
   };
 
   let lastScroll = 0;
-  let headerVisible = true;
+  let headerVisible = $state(true);
   onMount(() => {
     about = document.getElementById('about');
     skills = document.getElementById('skills');
@@ -83,19 +83,20 @@
         <a class:active={activeNavItem === 'testimonials'} href="#testimonials">Testimonials</a>
       </li>
       <li>
-        <button on:click={handleResumeClick}>Resume</button>
+        <button onclick={handleResumeClick}>Resume</button>
       </li>
     </ul>
   </nav>
 
-  <div
-    on:click={handleHamburgerMenuClick}
-    on:keydown={handleHamburgerMenuClick}
+  <button
+    aria-expanded={hamburgerMenuOpen}
+    onclick={handleHamburgerMenuClick}
+    onkeydown={handleHamburgerMenuClick}
     class="hamburger-menu"
     class:open={hamburgerMenuOpen}
   >
     <img src={hamburgerIcon} alt="Menu" />
-  </div>
+  </button>
 </header>
 
 <style>
@@ -170,7 +171,9 @@
   }
 
   .hamburger-menu {
+    border: none;
     display: none;
+    outline: none;
   }
 
   .desktop-logo {

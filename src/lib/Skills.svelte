@@ -45,7 +45,7 @@
     </ul>
   </div>
   <div class="skills--quadrant">
-    <div class="cat-mask" />
+    <div class="cat-mask"></div>
   </div>
   <div class="skills--quadrant">
     <h1>Soft Skills</h1>
