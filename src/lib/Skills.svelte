@@ -4,9 +4,10 @@
     <ul>
       <li>
         <p class="skills-copy">
-          I work at Penn Interactive, a subsidiary of Penn National Gaming. I write code on a team
-          developing Barstool Sportsbook & Casino, a traditional sportsbook paired with a best in
-          class Casino app.
+          I work at Penn Entertainment as a Senior Front-End Engineer, where I help build and
+          maintain the web presence for ESPN Bet and theScore Bet. I help maintain and develop vital
+          parts of our application, ensuring we deliver a consistent user experience and stay in
+          compliance with local laws.
         </p>
       </li>
       <li>
@@ -26,7 +27,7 @@
         <p class="skills-copy">
           I have experience working with most major Javascript front-end frameworks. I've built apps
           from scratch using React, contributed to enterprise-level deployments of Angular, and
-          currently work with Vue developing Barstool Sportsbook.
+          worked with Vue developing Barstool Sportsbook.
         </p>
       </li>
       <li>
@@ -38,7 +39,7 @@
       <li>
         <p class="skills-copy">
           My DevOps skills include experience with AWS, building infrastructure for cloud
-          applications and distributed websites. I’ve worked with Docker to build modular
+          applications and distributed websites. I've worked with Docker to build modular
           applications, and deployed static sites with AWS S3 and CloudFront.
         </p>
       </li>
@@ -55,6 +56,12 @@
           My experience as a consultant helped me grow communication skills that are useful outside
           of the consulting world. Being able to listen with empathy and communicate ideas in a
           consistent manner are essential parts of software engineering.
+        </p>
+      </li>
+      <li>
+        <p class="skills-copy">
+          As a Senior Engineer, I help mentor junior developers and interns. I enjoy helping others
+          grow their skills, and work through issues they encounter.
         </p>
       </li>
       <li>

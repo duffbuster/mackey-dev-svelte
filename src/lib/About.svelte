@@ -21,7 +21,7 @@
   .about {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 64px;
+    padding: 0 32px;
   }
 
   .about-copy {

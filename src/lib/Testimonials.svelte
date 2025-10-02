@@ -38,7 +38,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: calc(var(--spacing-unit) * 8);
+    margin-bottom: calc(var(--spacing-unit) * 2);
   }
 
   .testimonials-grid {
@@ -49,6 +49,18 @@
 
   .testimonials-grid-item {
     padding-right: calc(var(--spacing-unit) * 8);
+  }
+
+  .testimonials-grid-item > h2 {
+    margin-bottom: calc(var(--spacing-unit));
+  }
+
+  .testimonials-grid-item > p:before {
+    content: '“';
+    font-size: 32px;
+    line-height: 0;
+    margin-right: 4px;
+    vertical-align: middle;
   }
 
   .testimonials-grid-item img {

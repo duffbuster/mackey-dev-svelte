@@ -18,7 +18,7 @@ export const testimonials = [
     notes and wishes in terms of design and functionality and incorporated all of them into the
     final product. He also then taught our team how to make future updates to the website as
     needed! Colin was fast, responsive, a good listener, and most importantly extremely
-    effective. We are so happy with the final product! For your next project, I wouldn’t look
+    effective. We are so happy with the final product! For your next project, I wouldn't look
     anywhere else.`,
     logo: PsychexchangeLogo,
     alt: 'Psychexchange Logo',
